@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="style.css">
+{{>header}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.11/css/weather-icons.css"
+    integrity="sha512-WrHplq3TYPEkwmx3iOWybuK9tQ4oq6Qxff1aM48V2RI4CHPU3zBXebikfBsSf+/pMwc6vNUaMQLtwG7KUoP+kA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+<section class="weathersection container">
+    <div class="weather_data">
+        <h1 class="weather_title ">check Weather Here</h1>
+        <p class="home_desc">hellow friends here i making the weather webapp where the by 
+            deafult info of city pune in india beacause the i live in pune ,but you can input the any
+             city name you have get info  like tempreture ,speed
+             ,time,pressure and weather status easily  . Thank you to visit this site!</p>
+    </div>
+    <br><br>
+    <div class="wrapper class">
+        <div>
+            <h2>Weather App</h2>
+        </div>
+        <br />
+        <div class="search_bar">
+            <input type="search" class="input "  id="cityname" placeholder="Enter City Name" />
+            <span class="btn" id ="submitBtn">Search</span>
+        </div>
+        <div class="weather_card">
+            <div class="weather_state">
+                <div class="icon" id ="icon"> </div>
+                <span class="state" id="state">  </span>
+            </div>
+            <div class="temp_info">
+                <div class="temp" id="temp">  </div>
+                <div class="location">
+                    <span id="place">   </span> <br />
+                    <span class="time"> </span>
+                </div>
+
+            </div>
+            <div class="  extra_info">
+                <div class="extra_name">
+                    <span   id="sunset">  </span>
+                    <label>sunset</label>
+
+                </div>
+                <div class="extra_name">
+                    <span  id="humidity">   </span>
+                    <label>Feels like</label>
+
+                </div>
+                <div class="extra_name">
+                    <span id="pressure">  </span>
+                    <label>pressure</label>
+
+                </div>
+                <div class="extra_name">
+                    <span id="speed">  </span>
+                    <label>speed</label>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{>script}}
+
+<script>
+
+     const time = document.querySelector(".time");
+ 
+ 
+       setInterval(()=>{
+         var d   = new Date(). toLocaleString();
+       time.innerHTML = d ;
+      
+       },1000)
+ 
+      
+    
+</script>

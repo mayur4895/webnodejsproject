@@ -1,0 +1,484 @@
+      
+      
+      *{
+       margin: 0; 
+       padding: 0;
+       box-sizing: border-box;
+       font-family: Tahoma ;
+     } 
+
+     body{
+       width: 100%;
+       overflow-x: hidden;
+       background: var(--first-color);
+     }
+
+
+     :root{
+       --first-color : lavender;
+       --second-color:rgb(44, 38, 77);
+       --body-color:#fff;
+       --title-color:rgb(14, 14, 44); 
+       --text-color:#333;
+
+       --bigest-font:2.9rem;
+       --big-font:1.75rem;
+       --medium-font:1.1rem;
+       --small-font:.983rem;
+       --smaller-font:.913rem;
+
+
+     }
+   .home_img{
+      width: 100%;
+      height: auto;
+    }
+     a{ 
+       text-decoration: none; 
+     }
+  
+   .container{
+    max-width: 968px;
+    margin-left:1.5rem;
+    margin-right:1.5rem;
+}
+    .flex{
+       display: flex;
+     }
+  
+
+/* small device menu  */
+ @media screen and (max-width:968px){
+   :root{
+      --bigest-font:1.79rem;
+       --big-font:1.25rem;
+       --medium-font:.985rem;
+       --small-font:.893rem;
+       --smaller-font:.875rem;
+   }
+ 
+ }
+@media screen and (max-width:968px) {
+     .menu ul{
+   display: flex;
+   flex-direction: column;
+   row-gap: 2rem;
+   margin-right: 4rem;
+   margin-top: 8rem;  
+ } 
+  .menu {
+ background-color:  var(--second-color);
+ height: 100%;
+ width: 310px;
+ right: -100%;
+ top: 0;
+ position:  fixed;
+ z-index: 999;
+ border-radius: 5px 0px 0px 5px;
+ transition: .5s;
+  }
+  
+}
+
+ 
+
+header{
+  box-shadow: 0px 4px 25px  rgba(0,0,0,.13);
+ background-color:var(--second-color);
+}
+
+
+ .logo{
+   font-size: var(--medium-font);
+   font-weight: 900;
+   letter-spacing: 1px;
+   color: lavender;
+   text-transform: uppercase;
+ } 
+ .nav{
+   padding : 20px;
+   align-items: center;
+ }
+   ul{
+       list-style: none;
+       display: flex;
+       flex-direction: row;
+       column-gap: 2rem; 
+       margin-left: 5rem; 
+     }
+
+     li{
+       text-align: center;
+     }
+  .nav ul li a{
+    font-size: var(--smaller-font);
+     color:  var(--first-color);
+    font-weight: 500;
+    text-align: center; 
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+    transition: .4s;
+  }
+  .nav ul li a:hover{
+ color:  var(--body-color)!important;
+}
+   
+
+  .close{
+    position: absolute;
+    right: 2rem; 
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    top: 1rem;
+  }
+  .close:after{
+    position: absolute;
+    content: '';
+    height: 2rem;
+    width: 2px;
+    background-color:var(--first-color);
+     top: 16%;
+    right: 45%;
+    transform: rotate(45deg);
+  }
+   .close:before{
+    position: absolute;
+    content: '';
+    height: 2rem;
+    width: 2px;
+    background-color:var(--first-color);
+     top: 16%;
+    right: 45%;
+    transform: rotate(-45deg);
+  }
+ section{
+   padding: 8rem 0 2rem;
+ }
+ .menu.active{ 
+  right: 0%; 
+  }
+.navbar{
+  height: 45px;
+  width: 45px;
+ cursor: pointer;
+  right: 2rem;
+  top: 1rem;
+  position: absolute;
+}
+  .navbar:after{
+    position: absolute;
+    content: '';
+    height: 2rem;
+    width: 2px;
+    background-color: var(--first-color);
+     top: 16%;
+    right: 45%;
+    transform: rotate(90deg);
+  }
+   .navbar:before{
+    position: absolute;
+    content: '';
+    height: 1.5rem;
+    width: 2px;
+    background-color: var(--first-color);
+     margin-left: auto;
+    right: 29%;
+      transform: rotate(90deg);
+  }
+
+  /*============================ home================================= */
+.home_banner{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 4rem;
+}
+  .home_title{
+    color: var(--title-color);
+    font-size: var(--bigest-font);
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+  }
+ .home_img{
+   position: relative;
+    width: 290px;
+ }
+.home_img img{
+  box-shadow: 0px 4px 12px rgb(138, 143, 156);
+  width: 290px;
+  
+}
+ .border{
+  height: 500px;
+  width: 300px;
+  position:  absolute; 
+  border: 8px solid rgb(44, 38, 77);
+  top: -5%; 
+  right:   -18%; 
+  z-index: -1;
+}
+
+
+.home_desc{
+ color: var(--title-color);
+  word-spacing: 2px;
+  line-height: 23px;
+  font-weight: 400;
+  letter-spacing: .5px;
+}
+
+.button{
+  display: inline-block;
+  padding: .9rem 1.8rem;
+  margin-top: 2rem;
+  background-color: var(--second-color);
+ color: var(--first-color);
+  border-radius: 5px;
+  transition: .5s;
+}
+ 
+
+
+/* weather========================== */
+
+ .weathersection{
+     align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2rem;
+ }
+ 
+ 
+ .wrapper{
+     box-shadow: 0px 8px 25px rgba(0,0,0,.2);
+     padding: 25px  ;
+     height:  auto;
+     width: 550px; 
+     text-align: center;
+       color: rgb(32, 33, 37);
+       border-radius: 8px;
+       background-color: lavender;
+ }
+ .wrapper h2{
+       color : var(--second-color);
+     font-size: 1rem;
+     letter-spacing: 17px;
+     font-family:'Segoe UI'  ;
+     text-transform: uppercase;
+ }
+
+ .search_bar input{
+     height: 45px;
+     outline: none;
+     border: 1px solid rgb(138, 143, 156);
+     padding-left: 1rem;
+     padding-right: 1rem;
+     font-size: 1rem;
+     width: calc(100% - 100px); 
+     background: none;
+     color: rgb(36, 39, 46);
+       ;
+ }
+  .search_bar{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+     align-items: center;
+     
+  }
+  .search_bar .btn{
+     line-height: 45px;
+     text-decoration: none;
+   color: var(--first-color); 
+     cursor: pointer;
+     height: 45px;
+      background : var(--second-color);
+     right: 0;
+     top: 0;
+     display: inline-block;
+     padding:1px 1.1rem;
+     border-radius: 0px 5px 5px 0px; 
+     transition: .5s;
+ }
+ .search_bar .button:hover{
+      
+     background-color: var(--first-color);
+ }
+ input::placeholder{
+     color: grey;
+ }
+
+ .weather_card{
+   
+     display: flex;
+     flex-direction: column;
+     row-gap: 2rem;
+
+ }
+
+ .weather_state  .icon{
+     font-size: 6rem;
+         color : var(--second-color);
+        margin-bottom: 1.5rem;
+         align-items: center;
+         margin-top: 3rem;
+      
+ }
+  .weather_state .state{
+     font-size: 1.7rem;
+    text-transform: uppercase;
+     color : var(--second-color);
+ }
+ .temp_info{
+   display: flex;
+  flex-direction: row;
+  column-gap: 2rem;
+  justify-content: center;
+ }
+ 
+ .temp_info .temp{
+     font-size: 2.2rem;
+      color : var(--second-color);
+ }
+ .temp_info .place{
+  color: rgb(241, 96, 28);
+     font-size: 1.1rem;
+     letter-spacing: .5px;
+ }
+
+.extra_info{
+    display: flex;
+    flex-direction: row;
+    padding-top: 2rem; 
+    column-gap: 2rem;
+    justify-content: center;
+    border-top: 1px solid rgb(187, 183, 183);
+    
+}
+.extra_name{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+}
+
+
+.extra_name label{
+  color : var(--second-color);
+}
+
+.extra_name  > span{
+  font-size: 1.1rem; 
+  margin-top: 5px;
+  color: rgb(241, 96, 28);
+}
+.time{
+    font-size: .8rem;
+    
+    color: rgb(136, 112, 112);
+}
+
+
+
+.weather_title{
+  font-size: 2.3rem;
+  margin-bottom: 1.2rem;
+}
+
+
+
+
+.error{
+ 
+ display: flex;
+ align-items: center;
+  padding-top: 12rem;
+ justify-content: center;
+ height: 500px;
+ width: 500px;
+ margin-top: auto;
+   text-align: center;
+}
+
+.error h1{
+  font-size: 9rem;
+  letter-spacing: 1px;
+  color: var(--title-color);
+}
+.error  p{ 
+  font-size: 3rem;
+ 
+ 
+}
+
+
+
+.about_img img{
+  width: 400px;
+  opacity: .3;
+  filter: drop-shadow(0px 8px 20px rgba(0,0,0,.2));
+}
+
+.about_wrap{
+  width: 590px;
+  text-align: initial!important;
+
+}
+.aboutsection{
+  display: flex;
+  flex-direction: row;
+  column-gap: 3rem;
+  text-align: initial;
+}
+.about_item{
+  font-size: 1.4rem;
+ font-weight: 400;
+ color: green;
+}
+ .about_title{
+   font-size: var(--bigest-font);
+   color: var(--second-color);
+ }
+ .about_subtitle{
+   font-size: 1.2rem;
+   color: grey;
+ }
+.phone span{
+  font-size: 1.3rem;
+  color: grey;
+}
+/* ===========================responsive============================ */
+ 
+ 
+ @media screen and (min-width:969px) {
+   .close,
+   .navbar{
+     display: none;
+   }
+   .home_img:after,
+   .home_img,
+   .home_img img{
+     width: 350px;
+   }
+   
+  .home_banner{
+  flex-direction: row;
+  column-gap:  8rem;
+  }
+    .weathersection{
+       flex-direction: row;
+  column-gap: 1rem;
+    }
+.container{
+  margin-left: auto;
+  margin-right: auto;
+}
+ul {
+  margin-left:  15rem;
+}
+ }
+
+
