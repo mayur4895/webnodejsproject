@@ -3,7 +3,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const hbs = require("hbs"); 
-port = 3000;
+port = process.env.PORT || 3000;
  
  const staticpath =  path.join(__dirname,"../public");
 const templetepath = path.join(__dirname, "../templete/views");
