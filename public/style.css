@@ -11,6 +11,10 @@
        width: 100%;
        overflow-x: hidden;
        background: var(--first-color);
+       
+     }
+     html{
+       font-size: var(--medium-font);
      }
 
 
@@ -23,7 +27,7 @@
 
        --bigest-font:2.9rem;
        --big-font:1.75rem;
-       --medium-font:1.1rem;
+       --medium-font:1.2rem;
        --small-font:.983rem;
        --smaller-font:.913rem;
 
@@ -48,13 +52,13 @@
   
 
 /* small device menu  */
- @media screen and (max-width:968px){
+ @media screen and (max-width:1826px){
    :root{
-      --bigest-font:1.79rem;
-       --big-font:1.25rem;
-       --medium-font:.985rem;
-       --small-font:.893rem;
-       --smaller-font:.875rem;
+       --bigest-font :2.2rem;
+       --big-font:1.35rem;
+       --medium-font:1.15rem;
+       --small-font:1rem;
+       --smaller-font:.975rem;
    }
  
  }
@@ -76,6 +80,11 @@
  z-index: 999;
  border-radius: 5px 0px 0px 5px;
  transition: .5s;
+  }
+  .aboutsection{
+    flex-direction: column!important;
+    display: flex;
+   align-items: center;
   }
   
 }
@@ -197,7 +206,7 @@ header{
 }
   .home_title{
     color: var(--title-color);
-    font-size: var(--bigest-font);
+    font-size: var(--bigest-font)!important;
     margin-bottom: 1rem;
     text-transform: capitalize;
   }
@@ -248,16 +257,20 @@ header{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  row-gap: 2rem;
+  padding-left: 1.3rem!important;
+  padding-right: 1.3rem!important;
+  
  }
  
  
  .wrapper{
      box-shadow: 0px 8px 25px rgba(0,0,0,.2);
-     padding: 25px  ;
-     height:  auto;
-     width: 550px; 
+     padding: 20px; 
+      max-width: 500px; 
+      margin-top: -5rem;
+      width: 100%;
      text-align: center;
+     height: auto;
        color: rgb(32, 33, 37);
        border-radius: 8px;
        background-color: lavender;
@@ -276,9 +289,10 @@ header{
      border: 1px solid rgb(138, 143, 156);
      padding-left: 1rem;
      padding-right: 1rem;
-     font-size: 1rem;
-     width: calc(100% - 100px); 
+     font-size:  var(--medium-font);
+     width: calc(100% - 100px);  
      background: none;
+
      color: rgb(36, 39, 46);
        ;
  }
@@ -292,7 +306,8 @@ header{
   .search_bar .btn{
      line-height: 45px;
      text-decoration: none;
-   color: var(--first-color); 
+     color: var(--first-color); 
+         font-size:  var(--medium-font);
      cursor: pointer;
      height: 45px;
       background : var(--second-color);
@@ -309,6 +324,7 @@ header{
  }
  input::placeholder{
      color: grey;
+         font-size:  var(--medium-font);
  }
 
  .weather_card{
@@ -354,12 +370,14 @@ header{
     flex-direction: row;
     padding-top: 2rem; 
     column-gap: 2rem;
+    font-size:var(--medium-font);
     justify-content: center;
     border-top: 1px solid rgb(187, 183, 183);
     
 }
 .extra_name{
     display: flex;
+    font-size:var(--medium-font);
     flex-direction: column;
     row-gap: 1rem;
 
@@ -376,7 +394,7 @@ header{
   color: rgb(241, 96, 28);
 }
 .time{
-    font-size: .8rem;
+      font-size:  var(--smaller-font);
     
     color: rgb(136, 112, 112);
 }
@@ -434,7 +452,7 @@ header{
   text-align: initial;
 }
 .about_item{
-  font-size: 1.4rem;
+  font-size: var(--medium-font);
  font-weight: 400;
  color: green;
 }
@@ -443,12 +461,13 @@ header{
    color: var(--second-color);
  }
  .about_subtitle{
-   font-size: 1.2rem;
-   color: grey;
+   font-size:  var(--small-font);
+   color: #333;
+  
  }
 .phone span{
-  font-size: 1.3rem;
-  color: grey;
+  font-size:  var(--small-font);
+  color:  var(--second-color);
 }
 /* ===========================responsive============================ */
  
@@ -467,11 +486,7 @@ header{
   .home_banner{
   flex-direction: row;
   column-gap:  8rem;
-  }
-    .weathersection{
-       flex-direction: row;
-  column-gap: 1rem;
-    }
+  } 
 .container{
   margin-left: auto;
   margin-right: auto;
@@ -479,6 +494,14 @@ header{
 ul {
   margin-left:  15rem;
 }
+
  }
 
 
+@media screen and (min-width:1026px) {
+   .wrapper{
+     width: 600px;
+}
+   
+   }
+   
